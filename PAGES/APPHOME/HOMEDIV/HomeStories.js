@@ -12,7 +12,7 @@ const HOMESTORIES = (HOMESTORIESDIV,ICONSAPI,FULLSTORYDIV,DIV,CLOSEICON) => {
                 HOMEMINISTORIES.style.position='relative';
                 HOMEMINISTORIES.style.width='30%';
                 HOMEMINISTORIES.style.height='90%';
-                HOMEMINISTORIES.style.background='red';
+                HOMEMINISTORIES.style.background='#cfcfc0';
                 HOMEMINISTORIES.style.display='block';
                 HOMEMINISTORIES.style.overflow='hidden';
                 HOMEMINISTORIES.style.marginTop='1%';

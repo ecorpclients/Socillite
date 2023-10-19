@@ -14,7 +14,7 @@ const HOMEPOSTS=(DIV,HOMEPOSTSDIV,ICONSAPI)=>{
             HOMEMINISTORIES.style.position='relative';
             HOMEMINISTORIES.style.width='100%';
             HOMEMINISTORIES.style.height='100%';
-            HOMEMINISTORIES.style.background='blue';
+            HOMEMINISTORIES.style.background='#cfcfc0';
             HOMEMINISTORIES.style.display='block';
             HOMEMINISTORIES.style.overflow='hidden';
             HOMEMINISTORIES.style.marginTop='1rem';
@@ -30,7 +30,7 @@ const HOMEPOSTS=(DIV,HOMEPOSTSDIV,ICONSAPI)=>{
             //STYLES
             STORIESIMAGE.style.position='absolute';
             STORIESIMAGE.style.width='100%';
-            STORIESIMAGE.style.height='100%';
+            STORIESIMAGE.style.height='80%';
             STORIESIMAGE.style.display='block';
             STORIESIMAGE.style.overflow='hidden';
 
