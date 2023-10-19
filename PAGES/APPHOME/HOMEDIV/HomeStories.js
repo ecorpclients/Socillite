@@ -74,13 +74,16 @@ const HOMESTORIES = (HOMESTORIESDIV,ICONSAPI,FULLSTORYDIV,DIV,CLOSEICON) => {
                 SENDICON.src=ICONSAPI+'/send.png';
                 //STYLES
                 SENDICON.style.position='absolute';
-                SENDICON.style.width='30px';
-                SENDICON.style.height='30px';
-                SENDICON.style.right='15px';
+                SENDICON.style.width='25px';
+                SENDICON.style.height='25px';
+                SENDICON.style.right='10px';
                 SENDICON.style.bottom='0';
-                SENDICON.style.marginBottom='3%';
+                SENDICON.style.marginBottom='1%';
                 SENDICON.style.display='block';
                 SENDICON.style.overflow='hidden';
+                SENDICON.style.background='gray';
+                SENDICON.style.padding='0.5rem';
+                SENDICON.style.borderRadius='50px';
 
                 //SEND THE POST
                 SENDICON.addEventListener('click',()=>{
