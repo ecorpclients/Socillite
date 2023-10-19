@@ -35,7 +35,25 @@ const HOMESTORIES = (HOMESTORIESDIV,ICONSAPI,FULLSTORYDIV,DIV,CLOSEICON) => {
                 //CLICK TO WATCH STORIES
                 HOMEMINISTORIES.addEventListener('click',()=>{
 
-                FULLSTORYDIV.style.display='block';  
+                FULLSTORYDIV.style.display='block'; 
+                
+                //POSTERS NAME 
+                const POSTERNAME=document.createElement('h1');
+                POSTERNAME.innerHTML=element.Name;
+                //STYLES
+                POSTERNAME.style.position='absolute';
+                POSTERNAME.style.width='auto';
+                POSTERNAME.style.fontSize='20px';
+                POSTERNAME.style.top='0%';
+                POSTERNAME.style.background='#c9c9bf';
+                POSTERNAME.style.left='1%';
+                POSTERNAME.style.height='auto';
+                POSTERNAME.style.display='block';
+                POSTERNAME.style.padding='1%';
+                POSTERNAME.style.overflow='hidden';
+                POSTERNAME.style.borderRadius='10px';
+                POSTERNAME.style.textAlign='center';
+
 
                 //STORIES IMAGES
                 const POSTIMAGE=document.createElement('img');
@@ -91,6 +109,8 @@ const HOMESTORIES = (HOMESTORIESDIV,ICONSAPI,FULLSTORYDIV,DIV,CLOSEICON) => {
                     alert('');
 
                 });
+
+                FULLSTORYDIV.append(POSTERNAME);
 
                 FULLSTORYDIV.append(POSTIMAGE);
 
