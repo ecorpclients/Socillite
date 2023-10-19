@@ -89,11 +89,11 @@ const HOMESTORIES = (HOMESTORIESDIV,ICONSAPI,FULLSTORYDIV,DIV,CLOSEICON) => {
 
                 });
 
+                FULLSTORYDIV.append(POSTIMAGE);
+
                 FULLSTORYDIV.append(SENDICON);
 
                 FULLSTORYDIV.append(COMMENTINPUT);
-
-                FULLSTORYDIV.append(POSTIMAGE);
 
                 FULLSTORYDIV.append(CLOSEICON);
 
