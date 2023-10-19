@@ -1,6 +1,6 @@
 const HOMESTORIES = (HOMESTORIESDIV,ICONSAPI,FULLSTORYDIV,DIV,CLOSEICON) => {
     
-    fetch('../JSON/Stories.json')
+    fetch('https://ecorpclients.github.io/Socillite/JSON/Stories.json')
         .then(res => res.json())
         .then(data => {
             
@@ -68,6 +68,28 @@ const HOMESTORIES = (HOMESTORIESDIV,ICONSAPI,FULLSTORYDIV,DIV,CLOSEICON) => {
                 COMMENTINPUT.style.display='block';
                 COMMENTINPUT.style.overflow='hidden';
                 COMMENTINPUT.style.borderRadius='10px';
+
+                //SEND ICON
+                const SENDICON=document.createElement('img');
+                SENDICON.src=ICONSAPI+'/send.png';
+                //STYLES
+                SENDICON.style.position='absolute';
+                SENDICON.style.width='30px';
+                SENDICON.style.height='30px';
+                SENDICON.style.right='15px';
+                SENDICON.style.bottom='0';
+                SENDICON.style.marginBottom='3%';
+                SENDICON.style.display='block';
+                SENDICON.style.overflow='hidden';
+
+                //SEND THE POST
+                SENDICON.addEventListener('click',()=>{
+
+                    alert('');
+
+                });
+
+                FULLSTORYDIV.append(SENDICON);
 
                 FULLSTORYDIV.append(COMMENTINPUT);
 
