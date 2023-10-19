@@ -1,6 +1,6 @@
 const HOMESTORIESDIV=document.createElement('div');
 //STYLES
-HOMESTORIESDIV.style.position='absolute';
+HOMESTORIESDIV.style.position='relative';
 HOMESTORIESDIV.style.width='98%';
 HOMESTORIESDIV.style.height='20%';
 HOMESTORIESDIV.style.left='1%';

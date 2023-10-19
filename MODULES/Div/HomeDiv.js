@@ -5,8 +5,8 @@ HOMEPAGEDIV.style.width='100%';
 HOMEPAGEDIV.style.height='auto';
 HOMEPAGEDIV.style.bottom='10%';
 HOMEPAGEDIV.style.top='10%';
-HOMEPAGEDIV.style.background='#EAEAE9';
-HOMEPAGEDIV.style.display='inline-flex';
+HOMEPAGEDIV.style.background='black';
+HOMEPAGEDIV.style.display='block';
 HOMEPAGEDIV.style.overflowX='hidden';
 HOMEPAGEDIV.style.overflowY='scroll';
 

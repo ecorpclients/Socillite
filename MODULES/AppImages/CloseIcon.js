@@ -11,5 +11,8 @@ CLOSEICON.style.marginTop='0.5rem';
 CLOSEICON.style.padding='10px';
 CLOSEICON.style.right='0px';
 CLOSEICON.style.overflow='hidden';
+CLOSEICON.style.background='gray';
+CLOSEICON.style.padding='0.5rem';
+CLOSEICON.style.borderRadius='50px';
 
 export{CLOSEICON};
