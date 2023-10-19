@@ -84,7 +84,7 @@ const HOMESTORIES = (HOMESTORIESDIV,ICONSAPI,FULLSTORYDIV,DIV,CLOSEICON) => {
                 COMMENTINPUT.style.minHeight='16px';
                 COMMENTINPUT.style.height='32px';
                 COMMENTINPUT.style.maxHeight='32px';
-                COMMENTINPUT.style.bottom='0%';
+                COMMENTINPUT.style.bottom='3%';
                 COMMENTINPUT.style.display='block';
                 COMMENTINPUT.style.overflow='hidden';
                 COMMENTINPUT.style.borderRadius='10px';
@@ -97,7 +97,7 @@ const HOMESTORIES = (HOMESTORIESDIV,ICONSAPI,FULLSTORYDIV,DIV,CLOSEICON) => {
                 SENDICON.style.width='25px';
                 SENDICON.style.height='25px';
                 SENDICON.style.right='10px';
-                SENDICON.style.bottom='0';
+                SENDICON.style.bottom='3%';
                 SENDICON.style.marginBottom='1%';
                 SENDICON.style.display='block';
                 SENDICON.style.overflow='hidden';
