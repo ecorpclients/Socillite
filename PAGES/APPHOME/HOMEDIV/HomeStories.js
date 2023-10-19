@@ -1,4 +1,4 @@
-const HOMESTORIES = (HOMESTORIESDIV,ICONSAPI) => {
+const HOMESTORIES = (HOMESTORIESDIV,ICONSAPI,FULLSTORYDIV,DIV,CLOSEICON) => {
     
     fetch('../../../JSON/Stories.json')
         .then(res => res.json())
@@ -6,10 +6,11 @@ const HOMESTORIES = (HOMESTORIESDIV,ICONSAPI) => {
             
             data.forEach(element => {
                 
+                //STOIRES
                 const HOMEMINISTORIES=document.createElement('div');
                 //STYLES
                 HOMEMINISTORIES.style.position='relative';
-                HOMEMINISTORIES.style.width='20%';
+                HOMEMINISTORIES.style.width='30%';
                 HOMEMINISTORIES.style.height='90%';
                 HOMEMINISTORIES.style.background='red';
                 HOMEMINISTORIES.style.display='block';
@@ -21,17 +22,71 @@ const HOMESTORIES = (HOMESTORIESDIV,ICONSAPI) => {
                 HOMEMINISTORIES.style.borderRadius='10px';
                 HOMEMINISTORIES.style.flexShrink='0';
 
+                //STORIES IMAGES
                 const STORIESIMAGE=document.createElement('img');
                 STORIESIMAGE.src=ICONSAPI+element.Image;
                 //STYLES
-                STORIESIMAGE.style.position='relative';
+                STORIESIMAGE.style.position='absolute';
                 STORIESIMAGE.style.width='100%';
                 STORIESIMAGE.style.height='100%';
                 STORIESIMAGE.style.display='block';
                 STORIESIMAGE.style.overflow='hidden';
+                
+                //CLICK TO WATCH STORIES
+                HOMEMINISTORIES.addEventListener('click',()=>{
+
+                FULLSTORYDIV.style.display='block';  
+
+                //STORIES IMAGES
+                const POSTIMAGE=document.createElement('img');
+                POSTIMAGE.src=ICONSAPI+element.Image;
+                //STYLES
+                POSTIMAGE.style.position='absolute';
+                POSTIMAGE.style.width='90%';
+                POSTIMAGE.style.top='10%';
+                POSTIMAGE.style.left='5%';
+                POSTIMAGE.style.height='auto';
+                POSTIMAGE.style.display='block';
+                POSTIMAGE.style.overflow='hidden';
+                POSTIMAGE.style.borderRadius='10px';
+
+                //COMMENT INPUT
+                const COMMENTINPUT=document.createElement('input');
+                COMMENTINPUT.type='text';
+                //STYLES
+                COMMENTINPUT.style.position='absolute';
+                COMMENTINPUT.style.width='80%';
+                COMMENTINPUT.style.bottom='0%';
+                COMMENTINPUT.style.marginBottom='1%';
+                COMMENTINPUT.style.color='white';
+                COMMENTINPUT.style.background='grey';
+                COMMENTINPUT.style.left='2%';
+                COMMENTINPUT.style.minHeight='16px';
+                COMMENTINPUT.style.height='32px';
+                COMMENTINPUT.style.maxHeight='32px';
+                COMMENTINPUT.style.bottom='0%';
+                COMMENTINPUT.style.display='block';
+                COMMENTINPUT.style.overflow='hidden';
+                COMMENTINPUT.style.borderRadius='10px';
+
+                FULLSTORYDIV.append(COMMENTINPUT);
+
+                FULLSTORYDIV.append(POSTIMAGE);
+
+                FULLSTORYDIV.append(CLOSEICON);
+
+                CLOSEICON.addEventListener('click',()=>{
+
+                    FULLSTORYDIV.style.display='none'; 
+
+                })
+                
+                DIV.append(FULLSTORYDIV);
+
+                })
 
                 //APPEND THE DATA
-                
+
                 HOMEMINISTORIES.append(STORIESIMAGE);
 
                 HOMESTORIESDIV.append(HOMEMINISTORIES);
