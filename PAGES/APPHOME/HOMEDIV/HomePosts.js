@@ -160,7 +160,8 @@ const HOMEPOSTS=(DIV,HOMEPOSTSDIV,ICONSAPI)=>{
                 COMMENTSDIVDISPLAY.style.top='7%';
                 COMMENTSDIVDISPLAY.style.background='#bebeb7';
                 COMMENTSDIVDISPLAY.style.display='block';
-                COMMENTSDIVDISPLAY.style.overflow='hidden';
+                COMMENTSDIVDISPLAY.style.overflowX='hidden';
+                COMMENTSDIVDISPLAY.style.overflowY='scroll';
 
                 //COMMENTS NAME 
                 const COMMENTSNAME=document.createElement('h1');
@@ -182,9 +183,9 @@ const HOMEPOSTS=(DIV,HOMEPOSTSDIV,ICONSAPI)=>{
 
                 FULLSTORYDIV.append(COMMENTSDIVDISPLAY);
 
-                COMMENTSDIVDISPLAY.append(COMMENTSNAME);
-
                 FULLSTORYDIV.append(POSTERNAME);
+
+                COMMENTSDIVDISPLAY.append(COMMENTSNAME);
 
                 FULLSTORYDIV.append(COMMENTINPUT);
 
