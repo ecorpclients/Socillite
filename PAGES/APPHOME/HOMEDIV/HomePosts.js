@@ -180,9 +180,9 @@ const HOMEPOSTS=(DIV,HOMEPOSTSDIV,ICONSAPI)=>{
                 COMMENTSNAME.style.borderRadius='10px';
                 COMMENTSNAME.style.textAlign='left';
 
-                COMMENTSDIVDISPLAY.append(COMMENTSNAME);
-
                 FULLSTORYDIV.append(COMMENTSDIVDISPLAY);
+
+                COMMENTSDIVDISPLAY.append(COMMENTSNAME);
 
                 FULLSTORYDIV.append(POSTERNAME);
 
