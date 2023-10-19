@@ -1,5 +1,7 @@
+import { ICONSAPI } from "../../API/Api.js";
+
 const SETTINGSICON=document.createElement('img');
-SETTINGSICON.src='../../ASSETS/Icons/setting.png';
+SETTINGSICON.src=`${ICONSAPI}/setting.png`;
 //STYLES
 SETTINGSICON.style.position='relative';
 SETTINGSICON.style.width='30px';

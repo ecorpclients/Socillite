@@ -1,6 +1,8 @@
+import { ICONSAPI } from "../../API/Api.js";
+
 const MESSAGEICON=document.createElement('img');
-MESSAGEICON.src='../../ASSETS/Icons/chat.png';
-//STYLES
+MESSAGEICON.src=`${ICONSAPI}/chat.png`;
+//STYLESs/
 MESSAGEICON.style.position='relative';
 MESSAGEICON.style.width='30px';
 MESSAGEICON.style.height='30px';

@@ -1,29 +1,45 @@
-import { STORIESIMAGE } from "../../../MODULES/AppImages/StoriesImages.js";
-import { HOMEMINISTORIES } from "../../../MODULES/Div/MiniStoriesDiv.js";
-import { HOMESTORIESDIV } from "../../../MODULES/Div/StoriesDiv.js";
-
-const HOMESTORIES=()=>{
-
+const HOMESTORIES = (HOMESTORIESDIV,ICONSAPI) => {
+    
     fetch('../../../JSON/Stories.json')
+        .then(res => res.json())
+        .then(data => {
+            
+            data.forEach(element => {
+                
+                const HOMEMINISTORIES=document.createElement('div');
+                //STYLES
+                HOMEMINISTORIES.style.position='relative';
+                HOMEMINISTORIES.style.width='20%';
+                HOMEMINISTORIES.style.height='90%';
+                HOMEMINISTORIES.style.background='red';
+                HOMEMINISTORIES.style.display='block';
+                HOMEMINISTORIES.style.overflow='hidden';
+                HOMEMINISTORIES.style.marginTop='1%';
+                HOMEMINISTORIES.style.marginBottom='1%';
+                HOMEMINISTORIES.style.marginLeft='1%';
+                HOMEMINISTORIES.style.marginRight='1%';
+                HOMEMINISTORIES.style.borderRadius='10px';
+                HOMEMINISTORIES.style.flexShrink='0';
 
-    .then(res=>res.json())
+                const STORIESIMAGE=document.createElement('img');
+                STORIESIMAGE.src=ICONSAPI+element.Image;
+                //STYLES
+                STORIESIMAGE.style.position='relative';
+                STORIESIMAGE.style.width='100%';
+                STORIESIMAGE.style.height='100%';
+                STORIESIMAGE.style.display='block';
+                STORIESIMAGE.style.overflow='hidden';
 
-    .then(data =>{
+                //APPEND THE DATA
+                
+                HOMEMINISTORIES.append(STORIESIMAGE);
 
-        data.forEach(element => {
-        
-            STORIESIMAGE.src=element.Image;
+                HOMESTORIESDIV.append(HOMEMINISTORIES);
 
-            HOMEMINISTORIES.append(STORIESIMAGE)
+            });
 
-            HOMESTORIESDIV.append(HOMEMINISTORIES)
+        })
+        .catch(error => console.log(error));
+};
 
-        });
-
-    })
-
-    .catch(error => console.log(error));
-
-}
-
-export{HOMESTORIES};
+export { HOMESTORIES };

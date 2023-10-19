@@ -1,5 +1,7 @@
+import { ICONSAPI } from "../../API/Api.js";
+
 const MENUICON=document.createElement('img');
-MENUICON.src='../../ASSETS/Icons/menu (1).png';
+MENUICON.src=`${ICONSAPI}/menu (1).png`;
 //STYLES
 MENUICON.style.position='absolute';
 MENUICON.style.width='30px';
@@ -9,5 +11,7 @@ MENUICON.style.marginTop='1rem';
 MENUICON.style.left='0';
 MENUICON.style.padding='5px';
 MENUICON.style.overflow='hidden';
+
+
 
 export{MENUICON};

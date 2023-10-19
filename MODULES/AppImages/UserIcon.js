@@ -1,5 +1,7 @@
+import { ICONSAPI } from "../../API/Api.js";
+
 const USERICON=document.createElement('img');
-USERICON.src='../../ASSETS/Icons/profile.png';
+USERICON.src=`${ICONSAPI}/profile.png`;
 //STYLES
 USERICON.style.position='absolute';
 USERICON.style.width='30px';

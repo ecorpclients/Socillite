@@ -1,5 +1,7 @@
+import { ICONSAPI } from "../../API/Api.js";
+
 const POSTICON=document.createElement('img');
-POSTICON.src='../../ASSETS/Icons/post.png';
+POSTICON.src=`${ICONSAPI}/post.png`;
 //STYLES
 POSTICON.style.position='relative';
 POSTICON.style.width='30px';
