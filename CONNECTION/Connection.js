@@ -1,6 +1,9 @@
+import { HOMEPAGE } from "../PAGES/APPHOME/HOMEPAGE/HomePage.js";
+
+
 const CONNECTION=(DIV)=>{
 
-    alert('ready')
+    HOMEPAGE(DIV)
 
 }
 

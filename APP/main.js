@@ -8,7 +8,7 @@ BODY.style.position = 'fixed';
 BODY.style.width = '100%';
 BODY.style.height = '100%';
 BODY.style.overflow = 'hidden';
-BODY.style.background = '#5C829A';
+BODY.style.background = '#EAEAE9';
 BODY.style.display = 'block';
 BODY.style.padding = '0';
 BODY.style.margin = '0';
@@ -20,7 +20,7 @@ DIV.style.position = 'fixed';
 DIV.style.width = '100%';
 DIV.style.height = '100%';
 DIV.style.overflow = 'hidden';
-DIV.style.background = '#5C829A';
+DIV.style.background = '#EAEAE9';
 DIV.style.display = 'block';
 
 // SPLASHSCREEN function
@@ -43,7 +43,7 @@ const SPLASHSCREEN = () => {
   // Event listener to check online/offline status after 2 seconds
   setTimeout(() => {
     // Dynamically import the CONNECTION module
-    import("").then((module) => {
+    import("../CONNECTION/Connection.js").then((module) => {
       // Check if the user is online
       if (navigator.onLine) {
         // Perform your online actions here, e.g., load CONNECTION
