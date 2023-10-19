@@ -34,6 +34,8 @@ const HOMESTORIES = (HOMESTORIESDIV,ICONSAPI,FULLSTORYDIV,DIV,CLOSEICON) => {
                 
                 //CLICK TO WATCH STORIES
                 HOMEMINISTORIES.addEventListener('click',()=>{
+                    
+                FULLSTORYDIV.innerHTML=``; 
 
                 FULLSTORYDIV.style.display='block'; 
                 
@@ -110,9 +112,9 @@ const HOMESTORIES = (HOMESTORIESDIV,ICONSAPI,FULLSTORYDIV,DIV,CLOSEICON) => {
 
                 });
 
-                FULLSTORYDIV.append(POSTERNAME);
-
                 FULLSTORYDIV.append(POSTIMAGE);
+
+                FULLSTORYDIV.append(POSTERNAME);
 
                 FULLSTORYDIV.append(SENDICON);
 
