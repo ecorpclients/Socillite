@@ -1,6 +1,6 @@
 const HOMESTORIES = (HOMESTORIESDIV,ICONSAPI,FULLSTORYDIV,DIV,CLOSEICON) => {
     
-    fetch('../../../JSON/Stories.json')
+    fetch('../JSON/Stories.json')
         .then(res => res.json())
         .then(data => {
             
