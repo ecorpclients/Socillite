@@ -1,0 +1,15 @@
+.MenuIcon{
+    position: absolute;
+    left: 0.5rem;
+    width: 30px;
+    height: 30px;
+    top: 1rem;
+}
+
+.UserIcon{
+    position: absolute;
+    right: 0.5rem;
+    width: 30px;
+    height: 30px;
+    top: 1rem;
+}
