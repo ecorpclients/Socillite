@@ -21,6 +21,8 @@
     top: 10%;
     height: auto;
     background: blue;
-    display: inline-flex;
+    display: block;
     bottom: 10%;  
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
