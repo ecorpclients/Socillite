@@ -1,6 +1,7 @@
-import { HOMEDIVDATA } from "./HomeDivData.js";
+import { HOMEDIVDATA} from "./HomeDivData.js";
 import { HOMEFOOTERDATA } from "./HomeFooterData.js";
 import { HOMEHEADERDATA } from "./HomeHeaderData.js"
+import { Stories } from "./StoriesDisplay.js";
 
 const HOMEPAGE=(DIV)=>{
 
@@ -12,7 +13,11 @@ const HOMEPAGE=(DIV)=>{
 
     <div class='Footer'>${HOMEFOOTERDATA}</div>
 
+    <div class='FunctionsDiv'></div>
+
     `;
+
+    Stories(DIV)
 
 }
 

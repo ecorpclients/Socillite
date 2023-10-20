@@ -6,6 +6,8 @@
     display: inline-flex;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+    overflow-y: hidden;
+    overflow-x: auto;
 }
 
 .PostDiv{
