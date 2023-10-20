@@ -53,7 +53,7 @@ const Stories=(DIV)=>{
 
             <img src='${ICONSAPI}google.png' id='CloseStory' class='PostedStoryImage'/>
 
-            <input type="text" name="" class="CommentInput">
+            <input type="text" name="" placeholder='Review Story' class="CommentInput">
 
             <img src='${ICONSAPI}send.png'  class='sendIcon'/>
 
