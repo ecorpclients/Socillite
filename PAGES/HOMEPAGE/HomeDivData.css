@@ -1,8 +1,8 @@
 .StoriesDiv{
     position: relative;
     width: 100%;
-    height: 20%;
-    background: green;
+    height: 30%;
+    background: #d8d8d2;
     display: inline-flex;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -14,7 +14,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background: teal;
+    background: #d8d8d2;
     display: block;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;

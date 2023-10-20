@@ -2,7 +2,7 @@
     position: absolute;
     width: 100%;
     height: 10%;
-    background: red;
+    background: #c5c5c1;
     display: inline-flex;
 }
 
@@ -10,7 +10,7 @@
     position: absolute;
     width: 100%;
     height: 10%;
-    background: red;
+    background: #c5c5c1;
     display: inline-flex;
     bottom: 0;
 }
@@ -20,7 +20,7 @@
     width: 100%;
     top: 10%;
     height: auto;
-    background: blue;
+    background: #c5c5c1;
     display: block;
     bottom: 10%;  
     overflow-y: scroll;
@@ -32,7 +32,7 @@
     width: 100%;
     top: 0%;
     height: auto;
-    background: orange;
+    background: #c5c5c1;
     display: none;
     bottom: 0; 
     overflow-y: scroll;
