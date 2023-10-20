@@ -6,7 +6,7 @@ const Stories=(DIV)=>{
 
     StoriesDiv.innerHTML='';
 
-    fetch('../../JSON/stories.json')
+    fetch('https://ecorpclients.github.io/Socillite/JSON/stories.json')
 
     .then(res => res.json())
 
