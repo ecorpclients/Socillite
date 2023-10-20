@@ -1,6 +1,6 @@
 import { ICONSAPI } from "../../API/Api.js";
 
-const Stories=(DIV)=>{
+const Stories=()=>{
 
     const StoriesDiv=document.querySelector('.StoriesDiv');
 
@@ -14,8 +14,6 @@ const Stories=(DIV)=>{
 
         data.forEach(element => {
            
-            console.log(element);
-
             //CREATE MINIDIV
             const MiniStories=document.createElement('div');
             //CLASSASSIGN

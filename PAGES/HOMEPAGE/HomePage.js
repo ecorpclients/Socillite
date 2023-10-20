@@ -1,6 +1,7 @@
 import { HOMEDIVDATA} from "./HomeDivData.js";
 import { HOMEFOOTERDATA } from "./HomeFooterData.js";
 import { HOMEHEADERDATA } from "./HomeHeaderData.js"
+import { PostsDisplay } from "./PostsDisplay.js";
 import { Stories } from "./StoriesDisplay.js";
 
 const HOMEPAGE=(DIV)=>{
@@ -17,7 +18,9 @@ const HOMEPAGE=(DIV)=>{
 
     `;
 
-    Stories(DIV)
+    Stories()
+
+    PostsDisplay()
 
 }
 
