@@ -25,9 +25,9 @@ const PostsDisplay=()=>{
                 
                 <img src='${ICONSAPI}/google.png' id='UserProfileIcon' class='FooterIcons'/>
 
-                <img src='${ICONSAPI}/review.png' class='FooterIcons'/>
+                <img src='${ICONSAPI}/heart.png' id='CommentsIcon' class='FooterIcons'/>
 
-                <img src='${ICONSAPI}/save.png' class='FooterIcons'/>
+                <img src='${ICONSAPI}/review.png' class='FooterIcons'/>
 
                 <img src='${ICONSAPI}/share.png' class='FooterIcons'/>
                 
@@ -35,6 +35,8 @@ const PostsDisplay=()=>{
 
             `;
 
+            
+           
             POSTSDIV.append(POSTHOLDER);
 
         });

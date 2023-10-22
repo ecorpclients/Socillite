@@ -1,3 +1,4 @@
+import { USERACCOUNTPAGE } from "../USERACCOUNT/UserAccountPage.js";
 import { HOMEDIVDATA} from "./HomeDivData.js";
 import { HOMEFOOTERDATA } from "./HomeFooterData.js";
 import { HOMEHEADERDATA } from "./HomeHeaderData.js"
@@ -18,10 +19,14 @@ const HOMEPAGE=(DIV)=>{
 
     `;
 
-    Stories()
+    Stories();
 
-    PostsDisplay()
+    PostsDisplay();
+
+    USERACCOUNTPAGE();
+
+ 
 
 }
 
-export{HOMEPAGE}
+export{HOMEPAGE};
