@@ -3,7 +3,7 @@ import { ICONSAPI } from "../API/AppApi.js";
 
 const APPPOSTS=(DIV,SCROLLINGDIV)=>{
 
-    const URL='../JSON/Posts.json'
+    const URL='https://ecorpclients.github.io/Socillite/Advance-Native/JSON/Posts.json'
 
     fetch(URL)
 
