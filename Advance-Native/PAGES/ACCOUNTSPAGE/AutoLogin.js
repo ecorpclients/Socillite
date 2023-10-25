@@ -11,8 +11,6 @@ const AUTOLOGIN = (DIV) => {
             .then(res => res.json())
             .then(data => {
 
-                console.log(data)
-
                 if (data.Status === 'success') {
 
                     // User is authenticated, redirect to homepage
@@ -22,19 +20,27 @@ const AUTOLOGIN = (DIV) => {
                 } else {
 
                     localStorage.removeItem('UserEmail');
+
                     // User not authenticated, redirect to login page
                     LOGINPAGE(DIV);
+
                 }
             })
             .catch(error => {
+
                 console.error(error);
+
                 // Handle fetch error if needed
                 // For example, you can redirect to the login page here as well
+                
                 LOGINPAGE(DIV);
+
             });
     } else {
+
         // No stored email, redirect to login page
         LOGINPAGE(DIV);
+        
     }
 };
 

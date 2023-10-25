@@ -1,11 +1,22 @@
 import { ADVANCE } from "../ADVANCE/Advance.js";
+import { HOMEPAGE } from "../PAGES/HOMEPAGE/HomePage.js";
 
-const PROFILEICON=ADVANCE.PROFILEICON;
+const BACKICON=ADVANCE.BACKICON;
+
+const DELETEICON=ADVANCE.DELETEICON;
 
 const EDITICON=ADVANCE.EDITICON;
 
+const DOWNLOADICON=ADVANCE.DOWNLOADICON;
+
+const LOGOUTICON=ADVANCE.LOGOUTICON;
+
+const HELPICON=ADVANCE.HELPICON;
+
 const GETUSERDATA = (DIV) => {
+
     const URL = `https://demo.naweri.com/end-points/users-list.php`;
+
     const STOREDEMAIL = localStorage.getItem('UserEmail');
 
     fetch(URL)
@@ -15,199 +26,181 @@ const GETUSERDATA = (DIV) => {
 
             if (user) {
 
-                console.log(user);
+              console.log(user);
 
-                //CREATE A DIV FOR THE HOLDERS
-                const USERHOLDER=document.createElement('div')
+              //CREATE A PROFILE IMAGE 
+              const PROFILEIMAGE=document.createElement('img');
+              PROFILEIMAGE.src='../ASSETS/Images/profile.jpg';
                 //STYLES
-                USERHOLDER.style.position='relative';
-                USERHOLDER.style.width='95%';
-                USERHOLDER.style.height='30%';
-                USERHOLDER.style.background='red';
-                USERHOLDER.style.left='2%';
-                USERHOLDER.style.top='2%';
-                USERHOLDER.style.borderRadius='10px';
-                USERHOLDER.style.display='inline-flex';
+              PROFILEIMAGE.style.position='absolute';
+              PROFILEIMAGE.style.width='100%';
+              PROFILEIMAGE.style.height='50%';
+              PROFILEIMAGE.style.display='block';
+              PROFILEIMAGE.style.top='0%';
+              PROFILEIMAGE.style.borderRadius='0px 0px 10px 10px';
 
-                
-                //CREATE A DIV FOR THE HOLDERS
-                const USERSCECTION=document.createElement('h1')
-                USERSCECTION.innerHTML='User Profile';
+              //CREATE A PROFILE IMAGE 
+              const USERNAMEHOLDER=document.createElement('h1');
+              USERNAMEHOLDER.innerHTML=user.UserName;
                 //STYLES
-                USERSCECTION.style.position='absolute';
-                USERSCECTION.style.width='auto';
-                USERSCECTION.style.height='auto';
-                USERSCECTION.style.fontSize='20px';
-                USERSCECTION.style.background='black';
-                USERSCECTION.style.right='2%';
-                USERSCECTION.style.top='0';
-                USERSCECTION.style.padding='1%';
-                USERSCECTION.style.borderRadius='5px';
-                USERSCECTION.style.display='block';
+              USERNAMEHOLDER.style.position='absolute';
+              USERNAMEHOLDER.style.width='auto';
+              USERNAMEHOLDER.style.height='auto';
+              USERNAMEHOLDER.style.fontSize='20px';
+              USERNAMEHOLDER.style.padding='0.3rem';
+              USERNAMEHOLDER.style.borderRadius='5px';
+              USERNAMEHOLDER.style.background='black';
+              USERNAMEHOLDER.style.display='block';
+              USERNAMEHOLDER.style.right='1rem';
+              USERNAMEHOLDER.style.top='0%';
+              USERNAMEHOLDER.style.textAlign='center';
+
+              //CREATE A DIV FOR USERDETAILS
+              const USERDETAILS=document.createElement('div');
+              //STYLES
+              USERDETAILS.style.position='absolute';
+              USERDETAILS.style.width='100%';
+              USERDETAILS.style.height='50%';
+              USERDETAILS.style.bottom='0';
+              USERDETAILS.style.background='red';
+              USERDETAILS.style.borderRadius='10px 10px 0px 0px';
+
+              //CREATE A DIV FOR EACH SECTION
+              
+              //USERNAMEHOLDER
+              const USERNAMEDIV=document.createElement('div');
+              //STYLES
+              USERNAMEDIV.style.position='relative';
+              USERNAMEDIV.style.width='95%';
+              USERNAMEDIV.style.height='10%';
+              USERNAMEDIV.style.left='2%';
+              USERNAMEDIV.style.display='inline-flex';
+              USERNAMEDIV.style.marginTop='1rem';
+              USERNAMEDIV.style.marginBottom='1rem';
+              USERNAMEDIV.style.background='blue';
+              USERNAMEDIV.style.borderRadius='10px';
+
+              //USERNAME
+             const USERNAME=document.createElement('div');
+             //STYLES
+             USERNAME.style.position='relative';
+             USERNAME.style.marginLeft='auto';
+             USERNAME.style.marginRight='auto';
+             USERNAME.style.marginBottom='auto';
+             USERNAME.style.marginTop='auto';
+             USERNAME.style.display='block';
+             USERNAME.style.fontSize='20px';
+             USERNAME.innerHTML=user.UserEmail;
+
+             //USERTELEPHONEDIV
+             const USERTELEPHONEDIV=document.createElement('div');
+             //STYLES
+             USERTELEPHONEDIV.style.position='relative';
+             USERTELEPHONEDIV.style.width='95%';
+             USERTELEPHONEDIV.style.height='10%';
+             USERTELEPHONEDIV.style.left='2%';
+             USERTELEPHONEDIV.style.display='inline-flex';
+             USERTELEPHONEDIV.style.marginTop='1rem';
+             USERTELEPHONEDIV.style.marginBottom='1rem';
+             USERTELEPHONEDIV.style.background='blue';
+             USERTELEPHONEDIV.style.borderRadius='10px';
+
+             //TELEPHONE
+            const TELEPHONE=document.createElement('div');
+            //STYLES
+            TELEPHONE.style.position='relative';
+            TELEPHONE.style.marginLeft='auto';
+            TELEPHONE.style.marginRight='auto';
+            TELEPHONE.style.marginBottom='auto';
+            TELEPHONE.style.marginTop='auto';
+            TELEPHONE.style.display='block';
+            TELEPHONE.style.fontSize='20px';
+            TELEPHONE.innerHTML=user.UserTelephone;
+
+            //USERLOCATIONDIV
+            const USERLOCATIONDIV=document.createElement('div');
+            //STYLES
+            USERLOCATIONDIV.style.position='relative';
+            USERLOCATIONDIV.style.width='95%';
+            USERLOCATIONDIV.style.height='10%';
+            USERLOCATIONDIV.style.left='2%';
+            USERLOCATIONDIV.style.display='inline-flex';
+            USERLOCATIONDIV.style.marginTop='1rem';
+            USERLOCATIONDIV.style.marginBottom='1rem';
+            USERLOCATIONDIV.style.background='blue';
+            USERLOCATIONDIV.style.borderRadius='10px';
+
+            //USERLOCATION
+           const USERLOCATION=document.createElement('div');
+           //STYLES
+           USERLOCATION.style.position='relative';
+           USERLOCATION.style.marginLeft='auto';
+           USERLOCATION.style.marginRight='auto';
+           USERLOCATION.style.marginBottom='auto';
+           USERLOCATION.style.marginTop='auto';
+           USERLOCATION.style.display='block';
+           USERLOCATION.style.fontSize='20px';
+           USERLOCATION.innerHTML=user.UserLocation;
+
+           //USERFUNCTONDIV
+           const USERFUNCTONDIV=document.createElement('div');
+           //STYLES
+           USERFUNCTONDIV.style.position='absolute';
+           USERFUNCTONDIV.style.width='100%';
+           USERFUNCTONDIV.style.height='30%';
+           USERFUNCTONDIV.style.bottom='0';
+           USERFUNCTONDIV.style.left='0';
+           USERFUNCTONDIV.style.display='flex';
+           USERFUNCTONDIV.style.background='green';
+           USERFUNCTONDIV.style.borderRadius='10px 10px 0px 0px';
+
+           USERFUNCTONDIV.append(HELPICON);
+
+           USERFUNCTONDIV.append(EDITICON);
+           
+           USERFUNCTONDIV.append(LOGOUTICON);
 
 
-                 //CREATE A IMAGESHOLDER FOR THE HOLDERS
-                const USERIMAGEDIV=document.createElement('div')
-                 //STYLES
-                USERIMAGEDIV.style.position='relative';
-                USERIMAGEDIV.style.width='35%';
-                USERIMAGEDIV.style.height='90%';
-                USERIMAGEDIV.style.background='blue';
-                USERIMAGEDIV.style.left='1%';
-                USERIMAGEDIV.style.marginTop='auto';
-                USERIMAGEDIV.style.marginBottom='auto';
-                USERIMAGEDIV.style.marginLeft='auto';
-                USERIMAGEDIV.style.marginRight='auto';
-                USERIMAGEDIV.style.borderRadius='10px';
-                USERIMAGEDIV.style.display='inline-flex';
 
-                 //CREATE A IMAGE FOR THE HOLDERS
-                 const USERIMAGE=document.createElement('img')
-                 USERIMAGE.src=PROFILEICON;
-                 //STYLES
-                 USERIMAGE.style.position='relative';
-                 USERIMAGE.style.width='100px';
-                 USERIMAGE.style.height='100px';
-                 USERIMAGE.style.background='orange';
-                 USERIMAGE.style.left='1%';
-                 USERIMAGE.style.marginTop='auto';
-                 USERIMAGE.style.marginBottom='auto';
-                 USERIMAGE.style.marginLeft='auto';
-                 USERIMAGE.style.marginRight='auto';
-                 USERIMAGE.style.borderRadius='50px';
-                 USERIMAGE.style.display='inline-flex';
-                
-                  //CREATE A IMAGESHOLDER FOR THE HOLDERS
-                const USERDETAILDIV=document.createElement('div')
-                  //STYLES
-                USERDETAILDIV.style.position='relative';
-                USERDETAILDIV.style.width='55%';
-                USERDETAILDIV.style.height='90%';
-                USERDETAILDIV.style.background='black';
-                USERDETAILDIV.style.left='1%';
-                USERDETAILDIV.style.marginTop='auto';
-                USERDETAILDIV.style.marginBottom='auto';
-                USERDETAILDIV.style.marginLeft='auto';
-                USERDETAILDIV.style.marginRight='auto';
-                USERDETAILDIV.style.borderRadius='10px';
-                USERDETAILDIV.style.display='block';
+             
+              //APPEND THE USER DATA
 
-                 //CREATE A USERNAME FOR THE HOLDERS
-                 const USERNAMEHOLDER=document.createElement('h1')
-                 USERNAMEHOLDER.innerHTML=user.UserName;
-                 //STYLES
-                 USERNAMEHOLDER.style.position='relative';
-                 USERNAMEHOLDER.style.width='90%';
-                 USERNAMEHOLDER.style.height='10%';
-                 USERNAMEHOLDER.style.fontSize='20px';
-                 USERNAMEHOLDER.style.background='red';
-                 USERNAMEHOLDER.style.left='5%';
-                 USERNAMEHOLDER.style.textAlign='center';
-                 USERNAMEHOLDER.style.marginTop='1rem';
-                 USERNAMEHOLDER.style.marginBottom='1rem';
-                 USERNAMEHOLDER.style.padding='1%';
-                 USERNAMEHOLDER.style.borderRadius='5px';
-                 USERNAMEHOLDER.style.display='block';
+              USERNAMEDIV.append(USERNAME);
 
-                 //CREATE A USERNAME FOR THE HOLDERS
-                 const USEREMAILHOLDER=document.createElement('h1')
-                 USEREMAILHOLDER.innerHTML=user.UserTelephone;
-                 //STYLES
-                 USEREMAILHOLDER.style.position='relative';
-                 USEREMAILHOLDER.style.width='90%';
-                 USEREMAILHOLDER.style.height='10%';
-                 USEREMAILHOLDER.style.fontSize='15px';
-                 USEREMAILHOLDER.style.background='red';
-                 USEREMAILHOLDER.style.left='5%';
-                 USEREMAILHOLDER.style.textAlign='center';
-                 USEREMAILHOLDER.style.top='0';
-                 USEREMAILHOLDER.style.marginTop='1rem';
-                 USEREMAILHOLDER.style.marginBottom='1rem';
-                 USEREMAILHOLDER.style.padding='1%';
-                 USEREMAILHOLDER.style.borderRadius='5px';
-                 USEREMAILHOLDER.style.display='block';
+              USERDETAILS.append(USERNAMEDIV);
 
-                  //CREATE A USERNAME FOR THE HOLDERS
-                  const USERLOCATIONHOLDER=document.createElement('h1')
-                  USERLOCATIONHOLDER.innerHTML=user.UserLocation;
-                  //STYLES
-                  USERLOCATIONHOLDER.style.position='relative';
-                  USERLOCATIONHOLDER.style.width='90%';
-                  USERLOCATIONHOLDER.style.height='10%';
-                  USERLOCATIONHOLDER.style.fontSize='15px';
-                  USERLOCATIONHOLDER.style.background='red';
-                  USERLOCATIONHOLDER.style.left='5%';
-                  USERLOCATIONHOLDER.style.textAlign='center';
-                  USERLOCATIONHOLDER.style.top='0';
-                  USERLOCATIONHOLDER.style.marginTop='1rem';
-                  USERLOCATIONHOLDER.style.marginBottom='1rem';
-                  USERLOCATIONHOLDER.style.padding='1%';
-                  USERLOCATIONHOLDER.style.borderRadius='5px';
-                  USERLOCATIONHOLDER.style.display='block';
+              //USER TELEPHONE
+              
+              USERTELEPHONEDIV.append(TELEPHONE);
 
-                   //CREATE A USERNAME FOR THE HOLDERS
-                   const EDITBUTTON=document.createElement('h1')
-                   EDITBUTTON.innerHTML='Edit';
-                   //STYLES
-                   EDITBUTTON.style.position='absolute';
-                   EDITBUTTON.style.width='90%';
-                   EDITBUTTON.style.height='10%';
-                   EDITBUTTON.style.fontSize='15px';
-                   EDITBUTTON.style.background='red';
-                   EDITBUTTON.style.left='5%';
-                   EDITBUTTON.style.textAlign='center';
-                   EDITBUTTON.style.textAlign='center';
-                   EDITBUTTON.style.marginTop='1rem';
-                   EDITBUTTON.style.marginBottom='1rem';
-                   EDITBUTTON.style.bottom='1%';
-                   EDITBUTTON.style.padding='1%';
-                   EDITBUTTON.style.borderRadius='5px';
-                   EDITBUTTON.style.display='block';
-                
+              USERDETAILS.append(USERTELEPHONEDIV);
 
-                   //CREATE A USERNAME FOR THE HOLDERS
-                  const USEREMAIL=document.createElement('h1')
-                  USEREMAIL.innerHTML=user.UserEmail;
-                  //STYLES
-                  USEREMAIL.style.position='relative';
-                  USEREMAIL.style.width='90%';
-                  USEREMAIL.style.height='auto';
-                  USEREMAIL.style.background='red';
-                  USEREMAIL.style.left='2%';
-                  USEREMAIL.style.padding='2%'
-                  USEREMAIL.style.textAlign='left';
-                  USEREMAIL.style.fontSize='20px'
-                  USEREMAIL.style.top='2%';
-                  USEREMAIL.style.borderRadius='10px';
-                  USEREMAIL.style.display='inline-flex';
-                
+              //USERLOCATION
 
-                
-                //APPEND ALL THE DATA
+              USERLOCATIONDIV.append(USERLOCATION);
 
-                USERIMAGEDIV.append(USERIMAGE);
+              USERDETAILS.append(USERLOCATIONDIV);
 
-                USERIMAGEDIV.append(EDITICON);
+              //USERFUNCTTION DIV
+              USERDETAILS.append(USERFUNCTONDIV);
+              
 
-                USERHOLDER.append(USERIMAGEDIV);
+              DIV.append(USERDETAILS);
 
-                USERHOLDER.append(USERDETAILDIV);
+              DIV.append(PROFILEIMAGE);
 
-                USERDETAILDIV.append(USERNAMEHOLDER);
+              DIV.append(USERNAMEHOLDER);
 
-                USERDETAILDIV.append(USEREMAILHOLDER);
+              DIV.append(BACKICON);
 
-                USERDETAILDIV.append(USERLOCATIONHOLDER);
 
-                USERDETAILDIV.append(EDITBUTTON);
-                
-                
-                DIV.append(USERHOLDER);
-
-                DIV.append(USERSCECTION);
-
-                DIV.append(USEREMAIL);
-
+              BACKICON.onclick=()=>{
+                    
+                HOMEPAGE(DIV);
+            
+              }
+               
+              APPSTYLES();
                 
             } 
 
@@ -215,22 +208,16 @@ const GETUSERDATA = (DIV) => {
 
         .catch(error => console.error(error));
 
-        APPSTYLES();
+  
 
 };
 
-
 const APPSTYLES=()=>{
 
-    EDITICON.style.position='absolute';
-    EDITICON.style.width='25px';
-    EDITICON.style.height='25px';
-    EDITICON.style.background='transparent';
-    EDITICON.style.right='1%';
-    EDITICON.style.bottom='5%';
-    EDITICON.style.borderRadius='50px';
-    EDITICON.style.display='block';
-
+  BACKICON.style.width='20px';
+  BACKICON.style.height='20px';
+  BACKICON.style.background='black';
+  BACKICON.style.borderRadius='50px';
 }
 
 
