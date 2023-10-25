@@ -1,0 +1,42 @@
+{
+    "ADVANCE":{
+        "Designed":"E-corp Company Group",
+        "Histroy":"Made From E-corp Company Group By Erou Andrew Richard that is aimed At Easing the Rate Of App Development Without Alot oF Server Side Struggles",
+        "Version":"1",
+        "FOLDERSTRUCTURE":{
+            "APPENTRY":"Starts From Index.Html",
+            "ASSETS":"Where You Can store all Your Images ,Sounds ,Videos and Logos"
+        },
+        "UpdatedBy":{
+            "Users":[
+
+                {
+                    "Version1":"Erou Andrew Richard",
+                    "DATE":"23/10/2023",
+                    "Time":"20:00HRS"
+                },
+                {
+                    "Version2":"Erou Andrew Richard",
+                    "DATE":"24/10/2023",
+                    "Time":"07:00HRS"
+                }
+            ]
+            
+            
+        },
+        "Features":{
+            "Icons":{
+                
+            },
+            "Divs":{
+
+            },
+            "Headers":{
+
+            },
+            "Footers":{
+
+            }
+        }
+    }
+}
