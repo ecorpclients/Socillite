@@ -30,7 +30,7 @@ const GETUSERDATA = (DIV) => {
 
               //CREATE A PROFILE IMAGE 
               const PROFILEIMAGE=document.createElement('img');
-              PROFILEIMAGE.src='../ASSETS/Images/profile.jpg';
+              PROFILEIMAGE.src=`https://ecorpclients.github.io/Socillite/Advance-Native/ASSETS/Images/profile.jpg`;
                 //STYLES
               PROFILEIMAGE.style.position='absolute';
               PROFILEIMAGE.style.width='100%';
