@@ -59,7 +59,7 @@ const CHATTINGFUNCTION=(DIV,element)=>{
       CHATMESSAGEDIV.style.width='100%';
       CHATMESSAGEDIV.style.height='auto';
       CHATMESSAGEDIV.style.top='8%';
-      CHATMESSAGEDIV.style.bottom='10%';
+      CHATMESSAGEDIV.style.bottom='32px';
       CHATMESSAGEDIV.style.background='gray';
 
       CHATMESSAGEDIV.style.overflowY='auto';
@@ -154,14 +154,16 @@ const CHATTINGFUNCTION=(DIV,element)=>{
     SENDICON.style.height='20px';
     SENDICON.style.background='gray';
     SENDICON.style.right='0';
-    SENDICON.style.padding='1rem';
-    SENDICON.style.top='0.5rem';
+    SENDICON.style.padding='0.5rem';
+    SENDICON.style.top='0';
     SENDICON.style.borderRadius='50px';
 
 
 
 
     FOOTER.innerHTML='';
+
+    FOOTER.style.height='32px';
 
     FOOTER.append(SENDICON);
     FOOTER.append(CHATINPUT);
