@@ -130,7 +130,7 @@ const CHATTINGFUNCTION=(DIV,element)=>{
     const CHATINPUT=document.createElement('input');
     CHATINPUT.placeholder='Converse Here';
     //STYLES
-    CHATINPUT.style.position='relative';
+    CHATINPUT.style.position='absolute';
     CHATINPUT.style.width='80%';
     CHATINPUT.style.minHeight='16px';
     CHATINPUT.style.maxHeight='32px';
@@ -141,8 +141,7 @@ const CHATTINGFUNCTION=(DIV,element)=>{
     CHATINPUT.style.textAlign='left';
     CHATINPUT.style.border='none';
     CHATINPUT.style.borderRadius='10px';
-    CHATINPUT.style.marginTop='auto';
-    CHATINPUT.style.marginBottom='auto';
+    CHATINPUT.style.bottom='0';
 
 
     //SEND ICON
@@ -153,9 +152,9 @@ const CHATTINGFUNCTION=(DIV,element)=>{
     SENDICON.style.width='20px';
     SENDICON.style.height='20px';
     SENDICON.style.background='gray';
-    SENDICON.style.right='0';
+    SENDICON.style.right='1%';
     SENDICON.style.padding='0.5rem';
-    SENDICON.style.top='0';
+    SENDICON.style.bottom='0';
     SENDICON.style.borderRadius='50px';
 
 
@@ -163,7 +162,7 @@ const CHATTINGFUNCTION=(DIV,element)=>{
 
     FOOTER.innerHTML='';
 
-    FOOTER.style.height='32px';
+    FOOTER.style.height='50px';
 
     FOOTER.append(SENDICON);
     FOOTER.append(CHATINPUT);
