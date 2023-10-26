@@ -20,6 +20,8 @@ const HOMEPAGE=(DIV)=>{
 
     DIV.innerHTML=``;
 
+    FOOTER.innerHTML=``;
+
     DIV.append(HEADER);
 
     DIV.append(SCROLLINGDIV);
