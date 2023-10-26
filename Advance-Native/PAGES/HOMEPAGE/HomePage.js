@@ -1,5 +1,7 @@
 import { ADVANCE } from "../../ADVANCE/Advance.js";
 import { APPPOSTS } from "../../FUNCTIONS/GetPosts.js";
+import { APPSTYLES } from "../../STYLES/AppStyles.js";
+import { POSTPAGE } from "./PostPage.js";
 import { USERACCOUNTPAGE } from "./UserAccountPage.js";
 
 //APP SECTION
@@ -37,36 +39,20 @@ const HOMEPAGE=(DIV)=>{
         USERACCOUNTPAGE(DIV)
 
     }
+
+    POSTICON.onclick=()=>{
+
+        POSTPAGE(DIV);
+
+    }
   
    
 
-    APPSTYLES();
+    APPSTYLES()
 
     APPPOSTS(DIV,SCROLLINGDIV)
 }
 
-const APPSTYLES=()=>{
 
-    //SCROLLING DIV
-    SCROLLINGDIV.style.top='10%';
-    SCROLLINGDIV.style.bottom='10%';
-    SCROLLINGDIV.style.background='black';
-
-    //PROFILE ICON
-    PROFILEICON.style.position='absolute';
-    PROFILEICON.style.right='0';
-    PROFILEICON.style.top='10%';
-    PROFILEICON.style.padding='1rem';
-
-    //MENU ICON
-    MENUICON.style.position='absolute';
-    MENUICON.style.left='0';
-    MENUICON.style.top='10%';
-    MENUICON.style.padding='1rem';
-
-    
-
-
-}
 
 export{HOMEPAGE}

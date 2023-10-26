@@ -1,5 +1,6 @@
 import { ADVANCE } from "../ADVANCE/Advance.js";
 import { HOMEPAGE } from "../PAGES/HOMEPAGE/HomePage.js";
+import { APPSTYLES } from "../STYLES/AppStyles.js";
 
 const BACKICON=ADVANCE.BACKICON;
 
@@ -200,7 +201,7 @@ const GETUSERDATA = (DIV) => {
             
               }
                
-              APPSTYLES();
+              APPSTYLES()
                 
             } 
 
@@ -212,13 +213,7 @@ const GETUSERDATA = (DIV) => {
 
 };
 
-const APPSTYLES=()=>{
 
-  BACKICON.style.width='20px';
-  BACKICON.style.height='20px';
-  BACKICON.style.background='black';
-  BACKICON.style.borderRadius='50px';
-}
 
 
 export { GETUSERDATA };
