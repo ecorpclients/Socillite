@@ -4,15 +4,11 @@ import { APPSTYLES } from "../STYLES/AppStyles.js";
 
 const BACKICON=ADVANCE.BACKICON;
 
-const DELETEICON=ADVANCE.DELETEICON;
-
 const EDITICON=ADVANCE.EDITICON;
-
-const DOWNLOADICON=ADVANCE.DOWNLOADICON;
 
 const LOGOUTICON=ADVANCE.LOGOUTICON;
 
-const HELPICON=ADVANCE.HELPICON;
+const REVIEWICON=ADVANCE.REVIEWICON;
 
 const GETUSERDATA = (DIV) => {
 
@@ -38,7 +34,7 @@ const GETUSERDATA = (DIV) => {
               PROFILEIMAGE.style.height='50%';
               PROFILEIMAGE.style.display='block';
               PROFILEIMAGE.style.top='0%';
-              PROFILEIMAGE.style.borderRadius='0px 0px 10px 10px';
+              PROFILEIMAGE.style.objectFit='cover';
 
               //CREATE A PROFILE IMAGE 
               const USERNAMEHOLDER=document.createElement('h1');
@@ -50,7 +46,7 @@ const GETUSERDATA = (DIV) => {
               USERNAMEHOLDER.style.fontSize='20px';
               USERNAMEHOLDER.style.padding='0.3rem';
               USERNAMEHOLDER.style.borderRadius='5px';
-              USERNAMEHOLDER.style.background='black';
+              USERNAMEHOLDER.style.background='#7E7A98';
               USERNAMEHOLDER.style.display='block';
               USERNAMEHOLDER.style.right='1rem';
               USERNAMEHOLDER.style.top='0%';
@@ -63,8 +59,7 @@ const GETUSERDATA = (DIV) => {
               USERDETAILS.style.width='100%';
               USERDETAILS.style.height='50%';
               USERDETAILS.style.bottom='0';
-              USERDETAILS.style.background='red';
-              USERDETAILS.style.borderRadius='10px 10px 0px 0px';
+              USERDETAILS.style.background='#7E7A98';
 
               //CREATE A DIV FOR EACH SECTION
               
@@ -152,16 +147,36 @@ const GETUSERDATA = (DIV) => {
            USERFUNCTONDIV.style.bottom='0';
            USERFUNCTONDIV.style.left='0';
            USERFUNCTONDIV.style.display='flex';
-           USERFUNCTONDIV.style.background='green';
+           USERFUNCTONDIV.style.background='#7E7A98';
            USERFUNCTONDIV.style.borderRadius='10px 10px 0px 0px';
+           USERFUNCTONDIV.style.boxShadow='0px 1px 0px 1px #EAEAE9'
 
-           USERFUNCTONDIV.append(HELPICON);
+           USERFUNCTONDIV.append(REVIEWICON);
 
            USERFUNCTONDIV.append(EDITICON);
            
            USERFUNCTONDIV.append(LOGOUTICON);
 
+           EDITICON.onclick = () => {
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+        
+            fileInput.addEventListener('change', (event) => {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = () => {
+                        const imageUrl = reader.result;
+                        PROFILEIMAGE.src = imageUrl;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        
+            fileInput.click();
 
+            };
+        
 
              
               //APPEND THE USER DATA

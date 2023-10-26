@@ -24,7 +24,7 @@ const POSTPAGE=(DIV)=>{
     USERNAMEHOLDER.style.fontSize='20px';
     USERNAMEHOLDER.style.padding='0.3rem';
     USERNAMEHOLDER.style.borderRadius='5px';
-    USERNAMEHOLDER.style.background='black';
+    USERNAMEHOLDER.style.background='#7E7A98';
     USERNAMEHOLDER.style.display='block';
     USERNAMEHOLDER.style.right='1rem';
     USERNAMEHOLDER.style.top='0%';
@@ -37,10 +37,11 @@ const POSTPAGE=(DIV)=>{
        //STYLES
      PROFILEIMAGE.style.position='absolute';
      PROFILEIMAGE.style.width='100%';
-     PROFILEIMAGE.style.height='90%';
+     PROFILEIMAGE.style.height='auto';
      PROFILEIMAGE.style.display='block';
      PROFILEIMAGE.style.top='0%';
-     PROFILEIMAGE.style.objectFit='cover';
+     PROFILEIMAGE.style.bottom='10%';
+   
      
 
      //USERFUNCTONDIV
@@ -52,8 +53,9 @@ const POSTPAGE=(DIV)=>{
      USERFUNCTONDIV.style.bottom='0';
      USERFUNCTONDIV.style.left='0';
      USERFUNCTONDIV.style.display='flex';
-     USERFUNCTONDIV.style.background='grey';
+     USERFUNCTONDIV.style.background='#7E7A98';
      USERFUNCTONDIV.style.borderRadius='10px 0px 0px 0px';
+     USERFUNCTONDIV.style.boxShadow='0px 1px 0px 1px #EAEAE9'
 
 
     

@@ -7,6 +7,8 @@ import { AUTOLOGIN } from "../PAGES/ACCOUNTSPAGE/AutoLogin.js";
 
 const CONNECTION=(DIV)=>{
 
+    DIV.style.background='#7E7A98';
+    
     OPERATINGSYSTEM();
 
     ZOOMEFFECT();

@@ -14,10 +14,17 @@ const BACKICON=ADVANCE.BACKICON;
 
 const APPSTYLES=()=>{
 
+   
+    //HEADER
+    HEADER.style.background='#7E7A98';
+
+    //FOOTER
+    FOOTER.style.background='#7E7A98';
+
     //SCROLLING DIV
     SCROLLINGDIV.style.top='10%';
     SCROLLINGDIV.style.bottom='10%';
-    SCROLLINGDIV.style.background='black';
+    SCROLLINGDIV.style.background='#7E7A98';
 
     //PROFILE ICON
     PROFILEICON.style.position='absolute';
@@ -33,7 +40,7 @@ const APPSTYLES=()=>{
 
     BACKICON.style.width='20px';
     BACKICON.style.height='20px';
-    BACKICON.style.background='black';
+    BACKICON.style.background='#7E7A98';
     BACKICON.style.borderRadius='50px';
 }
 
