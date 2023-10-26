@@ -1,6 +1,7 @@
 import { ADVANCE } from "../../ADVANCE/Advance.js";
 import { APPPOSTS } from "../../FUNCTIONS/GetPosts.js";
 import { APPSTYLES } from "../../STYLES/AppStyles.js";
+import { CHATPAGE } from "./ChatPage.js";
 import { POSTPAGE } from "./PostPage.js";
 import { USERACCOUNTPAGE } from "./UserAccountPage.js";
 
@@ -43,6 +44,12 @@ const HOMEPAGE=(DIV)=>{
     POSTICON.onclick=()=>{
 
         POSTPAGE(DIV);
+
+    }
+
+    CHATICON.onclick=()=>{
+
+        CHATPAGE(DIV);
 
     }
   

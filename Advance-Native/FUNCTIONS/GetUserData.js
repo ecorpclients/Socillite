@@ -23,8 +23,6 @@ const GETUSERDATA = (DIV) => {
 
             if (user) {
 
-              console.log(user);
-
               //CREATE A PROFILE IMAGE 
               const PROFILEIMAGE=document.createElement('img');
               PROFILEIMAGE.src=`https://ecorpclients.github.io/Socillite/Advance-Native/ASSETS/Images/profile.jpg`;
